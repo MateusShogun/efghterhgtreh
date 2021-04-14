@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moedas</title> 
+    <link  id="css" rel="stylesheet" href="Estilo/estilo.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="conversor.js"></script>
+<script>
+  if(screen.width <=559){
+ document.getElementById("css").href = "Estilo/mobile.css"
+  }
+</script>
+</head>
+<body>
+	
+  <div id="interface"> 
+	  <div id="logomoeda">
+	<img src="img/Logo.png" width="400" height="190" >
+	</div>
+   
+    <span>Valor R$: </span> <br id="br"> <input id="entrada" type="number">  <br id="br">
+    <span id="br">Moeda: </span> 
+    <select id="moedas">
+        <option value='0'>Selecione</option>
+        <option value='1'>DÓLAR</option>
+        <option value='2'>EURO</option>
+        <option value='3'>PESO ARGENTINO</option>
+        <option value='4'>LITECOIN</option>
+        <option value='5'>BITCOIN</option>
+        <option value='6'>ETHEREUM</option>
+        <option value='7'>LIBRA ARGENTINA</option>
+        <option value='8'>DÓLAR ARGENTINO</option>
+        <option value='9'>DÓLAR AUSTRALIANO</option>
+        <option value='10'>IENE JAPÔNES</option>
+        <option value='11'>FRANCO SUIÇO</option>
+    </select>  
+    <button onclick="converter()">Calcular</button>
+    <br>
+    <h3 id="saida"></h3> 
+    <span id="atualizacao"></span>
+  </div>  
+</body>
+</html>
